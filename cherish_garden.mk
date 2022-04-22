@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021 The CherishOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,19 +20,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Nusantara stuff
 TARGET_BOOT_ANIMATION_RES := 720
-NAD_BUILD_TYPE := OFFICIAL
-USE_AOSP_CLOCK := true
 TARGET_SUPPORTS_QUICK_TAP := true
 USE_PIXEL_CHARGING := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 IS_PHONE := true
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Inherit from garden device makefile
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := nad_garden
+PRODUCT_NAME := cherish_garden
 PRODUCT_DEVICE := garden
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := xiaomi
@@ -50,3 +48,7 @@ BUILD_FINGERPRINT := google/coral/coral:12/SP2A.220305.012/8177914:user/release-
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
+
+# CherishOS
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=MAdMiZ
