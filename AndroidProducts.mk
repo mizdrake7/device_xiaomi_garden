@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/cherish_garden.mk
+   $(LOCAL_DIR)/awaken_garden.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_garden-userdebug \
-    cherish_garden-eng \
-    cherish_garden-user
+    awaken_garden-userdebug \
+    awaken_garden-eng \
+    awaken_garden-user
